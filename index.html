@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    // Задание 1
+    <script>
+    var a = 1, b = 1, c, d;
+c = ++a; alert(c); // 2,
+так как префикская форма инкремента сначал увеличивает значение на единицу, а затем присваивает его переменной
+d = b++; alert(d); // 1,
+так как постфиксная форма инкремента сначала присваивает значение, а затем увеличивает его на единицу
+c = (2+ ++a); alert(c); // 5
+так как 'a' на момент выполнения равно 2 и увеличивается на 1 префиксно, получаем с = 2 + 3
+d = (2+ b++); alert(d); // 4
+так как 'b' на момент выполнения равно 2, но увеличивается на 1 постфиксно (то есть в действии участвует его старое значение), получаем d = 2 + 2
+alert (a); // 3
+так как изначально было 1 и дважды увеличивалось на 1 при операциях
+alert (b); // 3
+так как изначально было 1 и дважды увеличивалось на 1 при операциях
+     </script>
+
+// Задание 2
+<script>
+   var a = 2;
+		var x = 1 + (a *= 2); /* X будет равен 5 т.к. оператор *= это сокращенный оператор, полностью он будет выглядеть x 	
+					= 1 + (a = a * 2 ) */
+</script>
+
+// Задание 3
+<script>
+      var a = +prompt( 'Введите число a' ),
+    b = +prompt( 'Введите число b' ),
+if ( isNaN(a) || isNaN(b) ) {
+    alert( 'Необходимо ввести числа!' );
+}
+else if ( a >= 0 && b >= 0 ) {
+    alert( a - b );
+}
+else if ( a < 0 && b < 0) {
+    alert( a * b );
+}
+else {
+    alert( a + b );
+}
+alert( result );
+</script>
+
+// Задание 4
+<script>
+   var a,
+    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function input_a () {
+    a = prompt('Введите число от 1 до 15');
+    if (a !== null && (a < 1 || a > 15 || isNaN(a))) {
+        input_a();
+    }
+}
+input_a();
+switch(a) {
+    case 1:
+        alert(arr);
+        break;
+    case 15:
+        alert(a);
+        break;
+    null:
+        break;
+    default:
+        alert(arr.slice(a-1));
+}
+    </script>
+    
+    // Задание 5
+    <script>
+		var a = 2;
+		var b = 3;
+
+		function plus (a, b) {
+    		return a + b;
+		}
+
+		function minus (a, b) {
+    		return a - b;
+		}
+
+		function div (a, b) {
+    		return a / b;
+		}
+
+		function mult (a, b) {
+    		return a + b;
+		}
+    </script>
+    
+    // Задание 6
+    <script>
+		function mathOperation(arg1, arg2, operation){
+    			switch(operation){
+       				 case 'сложение':
+           				 return arg1 + arg2;
+           				 break;
+       				 case 'вычитание':
+           				 return arg1 - arg2;
+            			 break;
+        			 case 'деление':
+                      			 return arg1 / arg2;
+            			 break;
+       				 case 'умножение':
+           				 return arg1 * arg2;
+            			 break;
+   				}
+		}
+
+	</script>
+
+</body>
+</html>
