@@ -7,117 +7,91 @@
     <title>Document</title>
 </head>
 <body>
-   
-    // Задание 1
     <script>
-    var a = 1, b = 1, c, d;
-c = ++a; alert(c); // 2,
-так как префикская форма инкремента сначал увеличивает значение на единицу, а затем присваивает его переменной
-d = b++; alert(d); // 1,
-так как постфиксная форма инкремента сначала присваивает значение, а затем увеличивает его на единицу
-c = (2+ ++a); alert(c); // 5
-так как 'a' на момент выполнения равно 2 и увеличивается на 1 префиксно, получаем с = 2 + 3
-d = (2+ b++); alert(d); // 4
-так как 'b' на момент выполнения равно 2, но увеличивается на 1 постфиксно (то есть в действии участвует его старое значение), получаем d = 2 + 2
-alert (a); // 3
-так как изначально было 1 и дважды увеличивалось на 1 при операциях
-alert (b); // 3
-так как изначально было 1 и дважды увеличивалось на 1 при операциях
-     </script>
+        console.log("Ответ на первое задание");
+        
+//      Создаем массив от 1 до 100
+        var arr = [];
+        var end = 1;
+        while (end < 100){
+            end++;
+            arr.push(end);
+        }
+//      Удаляем все четные цифры
+        var a = 2;
+        var b = 2;
+        while (a <= 100){
+            a += b;
+                arr.splice(arr.indexOf(a), 1);
+        }
+//      Удаляет все цифры которые деляться на нечетные до 10
+        a = 4;
+        b = 3;
+        while (a < 100){
+            if (a % b ===0 && arr.indexOf(a) !== -1){
+                arr.splice(arr.indexOf(a), 1);
+            }else {
+                a++;
+            }
+        }
 
-// Задание 2
+        a = 6;
+        b = 5;
+        while (a < 100) {
+            if (a % b === 0 && arr.indexOf(a) !== -1) {
+                arr.splice(arr.indexOf(a), 1);
+            } else {
+                a++;
+            }
+        }
+
+        a = 8;
+        b = 7;
+        while (a < 100) {
+            if (a % b === 0 && arr.indexOf(a) !== -1) {
+                arr.splice(arr.indexOf(a), 1);
+            } else {
+                a++;
+            }
+        }
+
+        console.log(arr);
+    </script>
 <script>
-   var a = 2;
-		var x = 1 + (a *= 2); /* X будет равен 5 т.к. оператор *= это сокращенный оператор, полностью он будет выглядеть x 	
-					= 1 + (a = a * 2 ) */
+    console.log("Ответ на второе задание");
+    
+    var a = -1;
+    do {
+        a++;
+        if (a === 0){
+            console.log(a, "- это ноль");
+        } else if (a % 2 ===0){
+            console.log(a, "- это четное число");
+        } else {
+            console.log(a, "- это нечетное число");
+        }
+    } while (a < 10);
 </script>
 
-// Задание 3
 <script>
-      var a = +prompt( 'Введите число a' ),
-    b = +prompt( 'Введите число b' ),
-if ( isNaN(a) || isNaN(b) ) {
-    alert( 'Необходимо ввести числа!' );
-}
-else if ( a >= 0 && b >= 0 ) {
-    alert( a - b );
-}
-else if ( a < 0 && b < 0) {
-    alert( a * b );
-}
-else {
-    alert( a + b );
-}
-alert( result );
-</script>
-
-// Задание 4
-<script>
-   var a,
-    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-function input_a () {
-    a = prompt('Введите число от 1 до 15');
-    if (a !== null && (a < 1 || a > 15 || isNaN(a))) {
-        input_a();
+    console.log("Ответ на третье задание");
+    
+    var i;
+    for ( i = 0; i <= 9; i++){
+        console.log(i);
     }
-}
-input_a();
-switch(a) {
-    case 1:
-        alert(arr);
-        break;
-    case 15:
-        alert(a);
-        break;
-    null:
-        break;
-    default:
-        alert(arr.slice(a-1));
-}
-    </script>
+</script>
+
+<script>
+    console.log("Ответ на четвертое задание");
     
-    // Задание 5
-    <script>
-		var a = 2;
-		var b = 3;
-
-		function plus (a, b) {
-    		return a + b;
-		}
-
-		function minus (a, b) {
-    		return a - b;
-		}
-
-		function div (a, b) {
-    		return a / b;
-		}
-
-		function mult (a, b) {
-    		return a + b;
-		}
-    </script>
-    
-    // Задание 6
-    <script>
-		function mathOperation(arg1, arg2, operation){
-    			switch(operation){
-       				 case 'сложение':
-           				 return arg1 + arg2;
-           				 break;
-       				 case 'вычитание':
-           				 return arg1 - arg2;
-            			 break;
-        			 case 'деление':
-                      			 return arg1 / arg2;
-            			 break;
-       				 case 'умножение':
-           				 return arg1 * arg2;
-            			 break;
-   				}
-		}
-
-	</script>
-
+    var arr = [];
+    var end = 0;
+    while (end < 20){
+        end++;
+        arr.push('x');
+        console.log(arr);
+    }
+</script>
 </body>
 </html>
